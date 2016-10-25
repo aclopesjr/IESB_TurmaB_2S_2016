@@ -1,0 +1,5 @@
+C:\Users\antonio.lopes\Documents\TB2S2016\TB2S2016_CSharp\BibliotecaA\bin\Debug\BibliotecaA.dll
+C:\Users\antonio.lopes\Documents\TB2S2016\TB2S2016_CSharp\BibliotecaA\bin\Debug\BibliotecaA.pdb
+C:\Users\antonio.lopes\Documents\TB2S2016\TB2S2016_CSharp\BibliotecaA\obj\Debug\BibliotecaA.csprojResolveAssemblyReference.cache
+C:\Users\antonio.lopes\Documents\TB2S2016\TB2S2016_CSharp\BibliotecaA\obj\Debug\BibliotecaA.dll
+C:\Users\antonio.lopes\Documents\TB2S2016\TB2S2016_CSharp\BibliotecaA\obj\Debug\BibliotecaA.pdb
