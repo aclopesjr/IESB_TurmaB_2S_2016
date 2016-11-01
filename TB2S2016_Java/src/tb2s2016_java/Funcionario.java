@@ -29,6 +29,10 @@ public class Funcionario {
     public void setNome(String nome) {
         this.nome = nome;
     }
+    
+    public void setNome(String nome, String sobreNome) {
+        this.nome = nome + " " + sobreNome;
+    }
 
     public double getSalario() {
         return salario;
@@ -36,6 +40,10 @@ public class Funcionario {
 
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+    
+    public double getBonificacao() {
+        return this.salario * 1.2;
     }
     
     public Funcionario(String cpf, String nome) {

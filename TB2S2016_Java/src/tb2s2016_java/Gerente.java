@@ -29,4 +29,9 @@ public class Gerente extends Funcionario {
         this(cpf, nome);
         this.setNroSubordinados(nroSubordinados);
     }
+    
+    @Override
+    public double getBonificacao() {
+        return super.getBonificacao() * 1.5;
+    }
 }

@@ -12,11 +12,15 @@ namespace TB2S2016_CSharp
         public string Nome
         {
             get { return this.nome; }
-            set { this.nome = value; }
+            set { this.nome = value.ToUpper(); }
         }
 
         public string Cpf { get; set; }
         public double Salario { get; set; }
+        public virtual double Bonificacao
+        {
+            get { return this.Salario * 1.2; }
+        }
 
         public Funcionario(string cpf, string nome)
         {

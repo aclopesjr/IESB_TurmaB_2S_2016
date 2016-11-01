@@ -19,4 +19,10 @@ public class Diretor extends Gerente {
             int nroSubordinados) {
         super(cpf, nome, nroSubordinados);
     }
+    
+    @Override
+    public double getBonificacao() {
+        return super.getBonificacao() * 2;
+    }
+            
 }

@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conta.cs" />
+    <Compile Include="Diretor.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Gerente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

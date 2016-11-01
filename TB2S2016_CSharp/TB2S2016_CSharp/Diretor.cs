@@ -8,6 +8,15 @@ namespace TB2S2016_CSharp
 {
     public class Diretor : Gerente
     {
+
+        public override double Bonificacao
+        {
+            get
+            {
+                return base.Bonificacao * 2;
+            }
+        }
+
         public Diretor(string cpf, string nome)
             :base (cpf, nome)
         {
