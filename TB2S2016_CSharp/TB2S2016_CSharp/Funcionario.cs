@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace TB2S2016_CSharp
 {
-    public class Funcionario
+    public class Funcionario : Pessoa
     {
-        private string nome;
-        public string Nome
+        public override void setNome(string nome, string sobrenome)
         {
-            get { return this.nome; }
-            set { this.nome = value.ToUpper(); }
+            this.nome = nome + " " + sobrenome;
         }
-
-        public string Cpf { get; set; }
+           
         public double Salario { get; set; }
         public virtual double Bonificacao
         {

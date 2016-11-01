@@ -9,30 +9,8 @@ package tb2s2016_java;
  *
  * @author antonio.lopes
  */
-public class Funcionario {
-    private String cpf;
-    private String nome;
+public class Funcionario extends Pessoa {
     private double salario;
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    
-    public void setNome(String nome, String sobreNome) {
-        this.nome = nome + " " + sobreNome;
-    }
 
     public double getSalario() {
         return salario;
@@ -42,12 +20,19 @@ public class Funcionario {
         this.salario = salario;
     }
     
+    @Override
+    public void setNome(String nome,
+            String sobreNome) {
+        this.nome = nome + " " + sobreNome;
+    }
+            
     public double getBonificacao() {
         return this.salario * 1.2;
     }
     
-    public Funcionario(String cpf, String nome) {
-        this.setCpf(cpf);
-        this.setNome(nome);
+    public Funcionario(String cpf,
+            String nome) {
+        this.cpf = cpf;
+        this.nome = nome;
     }
 }

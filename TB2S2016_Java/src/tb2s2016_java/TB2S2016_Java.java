@@ -76,6 +76,7 @@ public class TB2S2016_Java {
         System.out.println(
                 String.format("%s tem bonificação de %f",
                 dir1.getNome(), dir1.getBonificacao()));
+       
     }
     
 }
