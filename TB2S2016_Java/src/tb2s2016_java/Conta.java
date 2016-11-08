@@ -87,29 +87,31 @@ public class Conta {
         this.setLimite(limite);
     }
     
-    boolean deposita(double valor) {
+    boolean deposita(double valor)
+        throws ContaException {
         if (valor <= 0.0)
-            return false;
+            throw new ContaException("Valor do depósito inválido!");
         
         this.saldo += valor;
         return true;
     }
     
     boolean saca(double valor)
+            throws ContaException
     {
         if (this.saldo < valor)
-            return false;
+            throw new ContaException("Sem saldo!");
         
         this.saldo -= valor;
         return true;
     }
     
     boolean transferePara(Conta contadestino, double valor)
+            throws ContaException
     {
         if (!saca(valor))
             return false;
         
         return contadestino.deposita(valor);
     }
-
 }

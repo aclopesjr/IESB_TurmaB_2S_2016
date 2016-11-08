@@ -56,27 +56,47 @@ public class TB2S2016_Java {
 //                String.format("%s tem o saldo igual a %f",
 //                conta2.getNome(), conta2.getSaldo()));
         
-        Funcionario func1 = new Funcionario("22222222", "Fulano de Tal");
-        func1.setSalario(2600.50);
+//        Funcionario func1 = new Funcionario("22222222", "Fulano de Tal");
+//        func1.setSalario(2600.50);
+//        
+//        System.out.println(
+//                String.format("%s tem bonificação de %f",
+//                func1.getNome(), func1.getBonificacao()));
+//        
+//        Gerente ger1 = new Gerente("222222", "Ciclano", 6);
+//        ger1.setSalario(2600.50);
+//        
+//        System.out.println(
+//                String.format("%s tem bonificação de %f",
+//                ger1.getNome(), ger1.getBonificacao()));
+//        
+//        Diretor dir1 = new Diretor("222222", "Beltrano", 4);
+//        dir1.setSalario(2600.50);
+//        
+//        System.out.println(
+//                String.format("%s tem bonificação de %f",
+//                dir1.getNome(), dir1.getBonificacao()));  
         
-        System.out.println(
-                String.format("%s tem bonificação de %f",
-                func1.getNome(), func1.getBonificacao()));
+        Conta conta01 = new Conta();
+        try {
+            conta01.deposita(-200.00);
+        } catch (ContaException e) {
+            System.out.println(e.getMessage());
+        }
         
-        Gerente ger1 = new Gerente("222222", "Ciclano", 6);
-        ger1.setSalario(2600.50);
+        try {
+            conta01.deposita(300.0);
+        } catch (ContaException e) {
+            System.out.println(e.getMessage());
+        }
         
-        System.out.println(
-                String.format("%s tem bonificação de %f",
-                ger1.getNome(), ger1.getBonificacao()));
+        Conta conta02 = new Conta();
         
-        Diretor dir1 = new Diretor("222222", "Beltrano", 4);
-        dir1.setSalario(2600.50);
-        
-        System.out.println(
-                String.format("%s tem bonificação de %f",
-                dir1.getNome(), dir1.getBonificacao()));
-       
+        try {
+            conta01.transferePara(conta02, 300.0);
+        } catch (ContaException e) {
+            System.out.println(e.getMessage());
+        }
     }
     
 }

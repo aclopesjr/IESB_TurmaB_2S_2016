@@ -101,7 +101,7 @@ namespace TB2S2016_CSharp
         public Boolean Deposita(double valor)
         {
             if (valor <= 0.0)
-                return false;
+                throw new ContaException("Valor do depósito inválido!");
 
             this.Saldo += valor;
             return true;
@@ -110,7 +110,7 @@ namespace TB2S2016_CSharp
         public bool Saca(double valor)
         {
             if (this.Saldo < valor)
-                return false;
+                throw new ContaException("Sem saldo!");
 
             this.Saldo -= valor;
             return true;

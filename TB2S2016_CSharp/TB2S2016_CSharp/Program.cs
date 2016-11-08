@@ -30,20 +30,50 @@ namespace TB2S2016_CSharp
             ////BibliotecaA.ClasseA classeA = new BibliotecaA.ClasseA();
             ////BibliotecaA.ClasseB classeB = new BibliotecaA.ClasseB();
 
-            Funcionario func1 = new Funcionario("222222", "Ciclano");
-            func1.Salario = 2600.5;
+            //Funcionario func1 = new Funcionario("222222", "Ciclano");
+            //func1.Salario = 2600.5;
 
-            Console.WriteLine($"{func1.Nome} tem saldo igual {func1.Bonificacao}");
+            //Console.WriteLine($"{func1.Nome} tem saldo igual {func1.Bonificacao}");
 
-            Gerente ger1 = new Gerente("222222", "Beltrano", 10);
-            ger1.Salario = 2600.5;
+            //Gerente ger1 = new Gerente("222222", "Beltrano", 10);
+            //ger1.Salario = 2600.5;
 
-            Console.WriteLine($"{ger1.Nome} tem saldo igual {ger1.Bonificacao}");
+            //Console.WriteLine($"{ger1.Nome} tem saldo igual {ger1.Bonificacao}");
 
-            Diretor dir1 = new Diretor("222222", "Zeltrano", 4);
-            dir1.Salario = 2600.5;
+            //Diretor dir1 = new Diretor("222222", "Zeltrano", 4);
+            //dir1.Salario = 2600.5;
 
-            Console.WriteLine($"{dir1.Nome} tem saldo igual {dir1.Bonificacao}");
+            //Console.WriteLine($"{dir1.Nome} tem saldo igual {dir1.Bonificacao}");
+
+            Conta conta01 = new Conta();
+            try
+            {
+                conta01.Deposita(-200.00);
+            }
+            catch (ContaException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            try
+            {
+                conta01.Deposita(300.0);
+            }
+            catch (ContaException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            Conta conta02 = new Conta();
+
+            try
+            {
+                conta01.Transfere(300.0, conta02);
+            }
+            catch (ContaException e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             Console.ReadLine();
         }

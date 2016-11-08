@@ -25,6 +25,5 @@ public abstract class Pessoa {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public abstract void setNome(String nome,
-            String sobreNome);
+    
 }

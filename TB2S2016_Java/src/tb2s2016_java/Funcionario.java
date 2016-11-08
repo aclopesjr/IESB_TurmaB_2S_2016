@@ -9,7 +9,19 @@ package tb2s2016_java;
  *
  * @author antonio.lopes
  */
-public class Funcionario extends Pessoa {
+public class Funcionario extends Pessoa
+    implements Autenticavel {
+    
+    private String senhaInterna;
+
+    public String getSenhaInterna() {
+        return senhaInterna;
+    }
+
+    public void setSenhaInterna(String senhaInterna) {
+        this.senhaInterna = senhaInterna;
+    }
+            
     private double salario;
 
     public double getSalario() {
@@ -20,7 +32,6 @@ public class Funcionario extends Pessoa {
         this.salario = salario;
     }
     
-    @Override
     public void setNome(String nome,
             String sobreNome) {
         this.nome = nome + " " + sobreNome;
@@ -34,5 +45,10 @@ public class Funcionario extends Pessoa {
             String nome) {
         this.cpf = cpf;
         this.nome = nome;
+    }
+
+    @Override
+    public boolean autentica(String senha) {
+        return this.getSenhaInterna().equals(senha);
     }
 }
